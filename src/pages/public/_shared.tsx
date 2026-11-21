@@ -48,7 +48,7 @@ export function CtaBand() {
             <p className="mt-4 text-forest-100/80">Start a 30-day pilot with your own batches and buyer specifications. We'll configure your grading criteria with your quality team.</p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <Button size="lg" variant="lime" asChild>
-                <Link to="/register">Start free pilot <ArrowRight /></Link>
+                <Link to="/#demo">Request a demo <ArrowRight /></Link>
               </Button>
               <Button size="lg" variant="outline" className="border-white/20 bg-transparent text-white hover:bg-white/10" asChild>
                 <Link to="/login">Explore the live demo</Link>

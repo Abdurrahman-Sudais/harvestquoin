@@ -58,3 +58,9 @@ Configure via `VITE_AWS_MODE`, `VITE_API_BASE_URL`, `VITE_AWS_REGION`, `VITE_COG
 ## Stack
 
 Vite · React 18 · TypeScript · Tailwind CSS · shadcn/ui (Radix) · React Router · Lucide · Recharts · React Hook Form + Zod · jsPDF.
+
+## Website: lead capture, AWS section and motion
+
+- **Demo request** (home page, `#demo`) asks for company size, business type, primary use case and produce and volume; **contact** (`/contact`) has a topic picker. Both post to HubSpot when `VITE_HUBSPOT_*` is set (see `.env.example` and `docs/crm-plan.md`), otherwise they open a pre-filled email to hello@harvestquoin.com.
+- **Planned AWS infrastructure** and **progress** sections on the home page are driven by `src/kit/site.ts`.
+- **Motion:** headings, intros and card grids fade, rise and sharpen in sequence on scroll; the hero headline enters word by word with a cycling “Built for” line, followed by a marquee band and count-up figures from the demo data (`src/kit/flow.ts`, `src/kit/Flow.tsx`). Everything is shown immediately for visitors who prefer reduced motion.

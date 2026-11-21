@@ -1,3 +1,4 @@
+import { useFlow } from "@/kit/flow";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Menu, Mail, MapPin, Phone } from "lucide-react";
@@ -17,6 +18,8 @@ const NAV = [
 ];
 
 export function PublicLayout() {
+  const flowLoc = useLocation();
+  useFlow(flowLoc.pathname + flowLoc.hash);
   const { pathname } = useLocation();
   const { user } = useAuth();
   useEffect(() => {
@@ -47,7 +50,7 @@ export function PublicLayout() {
                   <Link to="/login">Log in</Link>
                 </Button>
                 <Button asChild>
-                  <Link to="/register">Start free pilot</Link>
+                  <Link to="/#demo">Request a demo</Link>
                 </Button>
               </>
             )}
@@ -77,7 +80,7 @@ export function PublicLayout() {
                 </SheetClose>
                 <SheetClose asChild>
                   <Button asChild>
-                    <Link to="/register">Start free pilot</Link>
+                    <Link to="/#demo">Request a demo</Link>
                   </Button>
                 </SheetClose>
               </div>

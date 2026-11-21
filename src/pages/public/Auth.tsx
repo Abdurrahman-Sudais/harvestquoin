@@ -91,7 +91,7 @@ export function Register() {
     nav("/app", { replace: true });
   };
   return (
-    <AuthShell title="Start your free pilot" subtitle={<>Already have an account? <Link to="/login" className="font-medium text-forest-700 hover:underline">Log in</Link></>}>
+    <AuthShell title="Create a demo account" subtitle={<>Already have an account? <Link to="/login" className="font-medium text-forest-700 hover:underline">Log in</Link></>}>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
         <div className="space-y-1.5"><Label htmlFor="name">Full name</Label><Input id="name" {...register("name")} />{errors.name && <p className="text-xs text-red-600">{errors.name.message}</p>}</div>
         <div className="space-y-1.5"><Label htmlFor="email">Work email</Label><Input id="email" type="email" {...register("email")} />{errors.email && <p className="text-xs text-red-600">{errors.email.message}</p>}</div>

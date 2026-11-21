@@ -1,3 +1,6 @@
+import { Cycle, Marquee, Stats, Words } from "@/kit/Flow";
+import { AwsSection, ProgressAndDemo } from "@/kit/Sections";
+import { SITE } from "@/kit/site";
 import { Link } from "react-router-dom";
 import { ArrowRight, ClipboardCheck, GitMerge, Package, ShieldCheck, Sparkles, Thermometer, TrendingDown, Truck, ShoppingCart, Warehouse, Users, Building2, Store, FlaskConical, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -34,14 +37,15 @@ export default function Home() {
               <span className="h-1.5 w-1.5 rounded-full bg-lime-500" /> Agricultural supply chain intelligence
             </div>
             <h1 className="mt-5 text-balance text-4xl font-extrabold leading-[1.08] text-forest-950 sm:text-5xl lg:text-[56px]">
-              Know Which Produce to Dispatch <span className="text-forest-600">Before Quality Becomes a Problem.</span>
+              <Words>Know which produce to dispatch <span className="text-forest-600">before quality becomes a problem.</span></Words>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               HarvestQuoin connects produce inspection records, handling conditions, inventory, and buyer requirements to help agricultural businesses make smarter dispatch decisions.
             </p>
+            <p className="mt-4 text-base text-muted-foreground"><Cycle lead="Built for" items={SITE.cycle} accent="text-forest-600" /></p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button size="lg" asChild>
-                <Link to="/register">Start free pilot <ArrowRight /></Link>
+                <a href="#demo">Request a demo <ArrowRight /></a>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link to="/login">Explore the live demo</Link>
@@ -66,6 +70,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Marquee items={SITE.marquee} label={`What ${SITE.name} is built for`} />
+      <Stats items={SITE.stats} />
 
       {/* Segments */}
       <section className="border-y bg-card">
@@ -187,6 +194,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <AwsSection />
+
+      <ProgressAndDemo />
 
       <CtaBand />
     </>
