@@ -3,8 +3,9 @@ import { ProducePhoto } from "@/components/shared";
 import { CtaBand, PageHero, Section, SectionHeading } from "./_shared";
 
 const FOUNDERS = [
-  { name: "Oluwaseun Adeyemi", role: "Founder", initials: "OA", text: "Leads product and engineering, focused on turning inspection and logistics data into dispatch decisions warehouse teams can act on." },
+  { name: "Oluwaseun Adeyemi", role: "Founder", initials: "OA", text: "Leads product and company direction, focused on turning inspection and logistics data into dispatch decisions warehouse teams can act on." },
   { name: "Hauwa Musa", role: "Co-founder", initials: "HM", text: "Leads operations and partnerships with aggregators, cooperatives and buyers, shaping how grading and acceptance criteria are configured." },
+  { name: "Ibrahim Lawal", role: "CTO", initials: "IL", text: "Leads engineering and the AWS platform behind HarvestQuoin — the inventory ledger, quality forecasting models, allocation engine and inspection assistant." },
 ];
 
 const VALUES = [
@@ -32,7 +33,7 @@ export default function About() {
       </Section>
       <Section className="bg-earth-50">
         <SectionHeading center eyebrow="Leadership" title="Meet the founders" />
-        <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-3">
           {FOUNDERS.map((f) => (
             <div key={f.name} className="rounded-2xl border bg-card p-7">
               <div className="flex items-center gap-4">

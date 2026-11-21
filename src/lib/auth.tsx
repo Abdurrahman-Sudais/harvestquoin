@@ -22,7 +22,7 @@ interface AuthApi {
 const KEY = "harvestquoin.session";
 const Ctx = createContext<AuthApi | null>(null);
 
-export const DEMO_USER: User = { name: "Hauwa Musa", email: "demo@harvestquoin.com", organisation: "Northern Fresh Aggregators Ltd", role: "Operations Manager" };
+export const DEMO_USER: User = { name: "Hauwa Musa", email: "demo@harvestquoin.site", organisation: "Northern Fresh Aggregators Ltd", role: "Operations Manager" };
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(() => {

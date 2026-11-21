@@ -14,7 +14,7 @@ export type Site = {
 };
 
 export const SITE: Site = {
-  name: "HarvestQuoin", email: "hello@harvestquoin.com", founder: "Oluwaseun Adeyemi",
+  name: "HarvestQuoin", email: "oluwaseun@harvestquoin.site", founder: "Oluwaseun Adeyemi",
   orgLabel: "Business type", orgTypes: ["Produce aggregator", "Packing house", "Cooperative", "Fresh-food wholesaler", "Other"],
   useCases: ["Inspection records", "Quality forecasting", "Order allocation", "Dispatch planning", "Reports and traceability", "Other"],
   topics: ["Pilot programme", "Pricing", "Technical / AWS deployment", "Data and integrations", "Partnership", "Other"],

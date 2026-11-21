@@ -116,7 +116,7 @@ export function PublicLayout() {
           </div>
           <div className="space-y-2 text-sm text-forest-200/80">
             <div className="text-sm font-semibold text-white">Get in touch</div>
-            <div className="flex items-center gap-2"><Mail className="h-4 w-4" /> hello@harvestquoin.com</div>
+            <div className="flex items-center gap-2"><Mail className="h-4 w-4" /> oluwaseun@harvestquoin.site</div>
             <div className="flex items-center gap-2"><Phone className="h-4 w-4" /> +234 (0) 700 000 0000</div>
             <div className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Lagos · Abuja · Kano</div>
           </div>

@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 
 /** Static, illustrative product screenshots rendered as live UI (no image assets needed). */
 
-export function BrowserFrame({ children, className, url = "app.harvestquoin.com" }: { children: ReactNode; className?: string; url?: string }) {
+export function BrowserFrame({ children, className, url = "app.harvestquoin.site" }: { children: ReactNode; className?: string; url?: string }) {
   return (
     <div className={cn("overflow-hidden rounded-xl border border-forest-900/10 bg-card shadow-2xl shadow-forest-900/15", className)}>
       <div className="flex items-center gap-2 border-b bg-earth-50 px-3 py-2">
