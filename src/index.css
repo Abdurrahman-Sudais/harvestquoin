@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 150 30% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 150 30% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 30% 10%;
+    --primary: 147 42% 20%;
+    --primary-foreground: 40 33% 98%;
+    --secondary: 42 30% 93%;
+    --secondary-foreground: 150 30% 14%;
+    --muted: 42 25% 94%;
+    --muted-foreground: 150 8% 38%;
+    --accent: 78 75% 58%;
+    --accent-foreground: 147 42% 14%;
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 18% 87%;
+    --input: 40 18% 84%;
+    --ring: 147 42% 28%;
+    --radius: 0.75rem;
+  }
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground antialiased; font-feature-settings: "cv11", "ss01"; }
+  h1, h2, h3, h4 { @apply font-display tracking-tight; }
+}
+
+@layer utilities {
+  .bg-grain {
+    background-image: radial-gradient(circle at 1px 1px, rgba(22, 54, 38, 0.06) 1px, transparent 0);
+    background-size: 18px 18px;
+  }
+  .text-balance { text-wrap: balance; }
+  .scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 999px; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+}
